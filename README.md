@@ -42,32 +42,3 @@
 <br>
 <br>
 
-
-## Project Screenshots
-
-<br>
-
-### Database Structure
-
-<img height="400" src="https://github.com/AnteZovko23/RestAPI-Node.js-PHP-MySQL/blob/master/screenshots/Database.png">
-
-<br>
-
-### Get all sports request
-
-<img height="400" src="https://github.com/AnteZovko23/RestAPI-Node.js-PHP-MySQL/blob/master/screenshots/GetAllSports.png">
-
-<br>
-
-### Get all odds request
-
-<img height="400" src="https://github.com/AnteZovko23/RestAPI-Node.js-PHP-MySQL/blob/master/screenshots/RequestAllOdds.png">
-
-<br>
-
-### Get all odds based on sportID and timestamp request
-
-<img height="400" src="https://github.com/AnteZovko23/RestAPI-Node.js-PHP-MySQL/blob/master/screenshots/Request.png">
-
-<br>
-
