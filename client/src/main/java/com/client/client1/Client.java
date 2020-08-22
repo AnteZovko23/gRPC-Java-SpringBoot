@@ -1,10 +1,6 @@
 package com.client.client1;
 
-
-import com.github.antezovko23.ConstantIncrement;
-import com.github.antezovko23.DynamicIncrement;
-import com.github.antezovko23.PresetIncrement;
-import com.github.antezovko23.ServerConnection;
+import com.github.antezovko23.clientlibrary.ServerConnection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
@@ -19,14 +15,14 @@ public class Client implements ApplicationRunner {
 	@Autowired
 	ServerConnection serverConnection;
 
-	@Autowired 
-	PresetIncrement presetIncrement;
+	// @Autowired 
+	// PresetIncrement presetIncrement;
 
-	@Autowired
-	DynamicIncrement dynamicIncrement;
+	// @Autowired
+	// DynamicIncrement dynamicIncrement;
 
-	@Autowired
-	ConstantIncrement constantIncrement;
+	// @Autowired
+	// ConstantIncrement constantIncrement;
 	
 
 	public static void main(String[] args)  {

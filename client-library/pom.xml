@@ -6,67 +6,38 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.3.3.RELEASE</version>
-		<relativePath/>
+		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.client</groupId>
-	<artifactId>client1</artifactId>
+	<groupId>com.github.antezovko23.clientlibrary</groupId>
+	<artifactId>client-library</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>demo</name>
-	<description>Client App</description>
-
-
-	<!-- <repositories>
-		<repository>
-			<id>oss-sonatype</id>
-			<name>oss-sonatype</name>
-			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-	</repositories> -->
+	<description>Demo project for Spring Boot</description>
 
 	<properties>
 		<java.version>14</java.version>
 	</properties>
 
-	
-
 	<dependencies>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
 
 
-		<!-- <dependency>
+		<dependency>
 			<groupId>net.devh</groupId>
 			<artifactId>grpc-client-spring-boot-starter</artifactId>
-			<version>2.9.0.RELEASE</version>
-		  </dependency> -->
-<!-- 
-		<dependency>
-			<groupId>com.github.antezovko23</groupId>
-			<artifactId>library</artifactId>
-			<version>7.14</version>
-		</dependency> -->
-
-
-
-		
-		<dependency>
-			<groupId>com.github.antezovko23.clientlibrary</groupId>
-			<artifactId>client-library</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>2.10.0.RELEASE</version>
 		</dependency>
 
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
-			<optional>true</optional>
+			<groupId>com.github.antezovko23.grpcservicestubs</groupId>
+			<artifactId>grpc-service-generated-stubs</artifactId>
+			<version>1.0-SNAPSHOT</version>
 		</dependency>
+
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -85,8 +56,10 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<classifier>exec</classifier>
+				</configuration>
 			</plugin>
-
 		</plugins>
 	</build>
 
