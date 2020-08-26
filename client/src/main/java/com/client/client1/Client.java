@@ -33,9 +33,9 @@ public class Client implements ApplicationRunner {
     public void run(ApplicationArguments args) {
 	
 
-			System.out.println(serverConnection.connectToServer("Test", 2, 4));
+			// System.out.println(serverConnection.connectToServer("Test", 2, 4));
 
-			// System.out.print(dynamicIncrement.increment(4, 2));
+			System.out.print(dynamicIncrement.increment(4, 2));
 
 
 		

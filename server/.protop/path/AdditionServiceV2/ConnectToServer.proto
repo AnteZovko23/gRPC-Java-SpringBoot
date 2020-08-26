@@ -1,1 +1,33 @@
-/home/antezovko23/Desktop/Software Testing/grpcImproved/library-springboot/server/./.protop/deps/AnteZovko23/addition-protos/AdditionServiceV2/ConnectToServer.proto
+syntax = "proto3";
+
+package com.protolib;
+
+option go_package = ".;gateway"
+
+import "Increment.proto";
+option java_package = "com.grpcLib.generatedStubs";
+option java_outer_classname = "ConnectToServerBuilder";
+
+
+
+service ConnectToServer {
+    rpc connection(ConnectRequest) returns (ConnectReply);
+}
+
+
+message ConnectRequest {
+    
+     
+    string textMessage = 1;
+    DynamicIncrementRequest numericalMessage = 2;
+    
+}
+
+message ConnectReply {
+    
+    repeated string connectedMessage = 1;
+    int32 calculatedNumber = 2;
+
+    
+
+}
