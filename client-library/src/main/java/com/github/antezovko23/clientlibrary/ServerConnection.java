@@ -5,45 +5,45 @@ import com.grpcLib.generatedStubs.ConnectToServerBuilder.ConnectRequest;
 import com.grpcLib.generatedStubs.ConnectToServerGrpc.ConnectToServerBlockingStub;
 import com.grpcLib.generatedStubs.IncrementBuilder.DynamicIncrementRequest;
 
-import org.springframework.beans.factory.annotation.Autowired;
 
 
-import io.grpc.ManagedChannel;
 import io.grpc.StatusRuntimeException;
 
 
 public class ServerConnection {
 
-    private static ManagedChannel channel;
-    private ConnectToServerBlockingStub stub;
+
+    private ConnectToServerBlockingStub serverConnectionStub;
 
     
-    @Autowired
-    public ServerConnection(ManagedChannel channel, ConnectToServerBlockingStub stub){
+    public ServerConnection(ConnectToServerBlockingStub serverConnectionStub){
 
-        ServerConnection.channel = channel;
-        this.stub = stub;
+        this.serverConnectionStub = serverConnectionStub;
 
     }
 
-
+    // Method a client can use
     public String connectToServer(String message, int number, int step){
 
 
         try {
 
+            // Builds increment request with Number and Step
             DynamicIncrementRequest dynamicIncrementRequest = DynamicIncrementRequest.newBuilder()
                                                                                      .setNumber(number)
                                                                                      .setStep(step)
                                                                                      .build();
-
+            // Builds connect request with text message
             ConnectRequest request = ConnectRequest.newBuilder()
                                                    .setTextMessage(message)
                                                    .setNumericalMessage(dynamicIncrementRequest)
                                                    .build();
 
-            
-            ProtocolStringList response = stub.connection(request).getConnectedMessageList();
+            // Builds response
+            ProtocolStringList response = serverConnectionStub.connection(request)
+                                                              .getConnectedMessageList();
+
+
 
             String responseStructure = "";
 
@@ -54,6 +54,8 @@ public class ServerConnection {
 
             return responseStructure;
             
+
+
         } catch (StatusRuntimeException e){
 
             return "Server Status: " + e.getStatus().getCode();

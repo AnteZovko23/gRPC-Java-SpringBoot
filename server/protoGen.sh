@@ -1,9 +1,9 @@
 
-cd "/home/antezovko23/Desktop/grpcImproved/server/src/main/java/com"
+cd "/home/antezovko23/Desktop/Software Testing/grpcImproved/library-springboot/server/src/main/java/com"
 
 rm -rf grpcLib
 
-cd "/home/antezovko23/Desktop/grpcImproved/server"
+cd "/home/antezovko23/Desktop/Software Testing/grpcImproved/library-springboot/server"
 
 
 ## Creates the protobuf Stubs
@@ -26,4 +26,4 @@ cd "/home/antezovko23/Desktop/grpcImproved/server"
 
 
 
-cd "/home/antezovko23/Desktop/grpcImproved/server/src/main/java/com"
+cd "/home/antezovko23/Desktop/Software Testing/grpcImproved/library-springboot/server/src/main/java/com"

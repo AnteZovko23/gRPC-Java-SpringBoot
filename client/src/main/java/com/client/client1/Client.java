@@ -2,6 +2,8 @@ package com.client.client1;
 
 import com.github.antezovko23.clientlibrary.ServerConnection;
 
+import com.github.antezovko23.clientlibrary.*;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -15,14 +17,10 @@ public class Client implements ApplicationRunner {
 	@Autowired
 	ServerConnection serverConnection;
 
-	// @Autowired 
-	// PresetIncrement presetIncrement;
+	@Autowired
+	DynamicIncrement dynamicIncrement;
 
-	// @Autowired
-	// DynamicIncrement dynamicIncrement;
 
-	// @Autowired
-	// ConstantIncrement constantIncrement;
 	
 
 	public static void main(String[] args)  {
@@ -32,16 +30,12 @@ public class Client implements ApplicationRunner {
 
 
 	@Override
-    public void run(ApplicationArguments args) throws Exception {
+    public void run(ApplicationArguments args) {
 	
 
 			System.out.println(serverConnection.connectToServer("Test", 2, 4));
 
-			// // System.out.println(dynamicIncrement.increment(3, 6));
-
-			// // System.out.println(presetIncrement.incrementByTen(2));
-
-			// constantIncrement.incrementConstantly(4, 2);
+			// System.out.print(dynamicIncrement.increment(4, 2));
 
 
 		

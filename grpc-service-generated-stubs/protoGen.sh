@@ -1,9 +1,9 @@
 
-cd "/home/antezovko23/Desktop/grpcImproved/library-springboot/grpc-service-generated-stubs/src/main/java/com"
+cd "/home/antezovko23/Desktop/Software Testing/grpcImproved/library-springboot/grpc-service-generated-stubs/src/main/java/com"
 
 rm -rf grpcLib
 
-cd "/home/antezovko23/Desktop/grpcImproved/library-springboot/grpc-service-generated-stubs"
+cd "/home/antezovko23/Desktop/Software Testing/grpcImproved/library-springboot/grpc-service-generated-stubs"
 
 
 ## Creates the protobuf Stubs
@@ -26,4 +26,4 @@ cd "/home/antezovko23/Desktop/grpcImproved/library-springboot/grpc-service-gener
 
 
 
-cd "/home/antezovko23/Desktop/grpcImproved/library-springboot/grpc-service-generated-stubs/src/main/java/com"
+cd "/home/antezovko23/Desktop/Software Testing/grpcImproved/library-springboot/grpc-service-generated-stubs/src/main/java/com"

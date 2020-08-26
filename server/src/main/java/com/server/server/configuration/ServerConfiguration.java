@@ -6,6 +6,7 @@ import com.grpcLib.generatedStubs.PresetIncrementGrpc;
 import com.grpcLib.generatedStubs.ConnectToServerGrpc.ConnectToServerBlockingStub;
 import com.grpcLib.generatedStubs.DynamicIncrementGrpc.DynamicIncrementBlockingStub;
 import com.grpcLib.generatedStubs.PresetIncrementGrpc.PresetIncrementFutureStub;
+import com.server.server.service.DynamicIncrementHelper;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.context.annotation.Bean;
@@ -16,7 +17,7 @@ import io.grpc.ManagedChannelBuilder;
 
 
 @Configuration
-public class config {
+public class ServerConfiguration {
 
 
 
